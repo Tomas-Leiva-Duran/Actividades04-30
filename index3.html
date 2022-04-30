@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Concepto JS</title>
+    
+    <style>
+        * { margin: 0 px; padding: 0px; border:none; }
+        #elemento { background: #ff8585 }
+    </style>
+</head>
+<body>
+    <div id="elemento" type="maestro">
+        <p>
+            asdfasdfsadfdsa <b>asdfasd</b> fas d
+        </p>
+    </div>
+
+    <!-- 
+        JAVASCRIPT
+    div#elemento { text: "asdfasdfsadfdsa asdfasd fas d" }
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function(){
+            // Acá se ejecuta el código de inicio:
+            Inicio();
+        })
+        function Inicio(){
+            const obj = $("#elemento");
+            obj.html("<div class='otrodiv'>mi otro div</div>");
+
+            obj.append("este un texto que se agregó desde jQuery")
+        }
+    </script>
+</body>
+</html>
